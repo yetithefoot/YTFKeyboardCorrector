@@ -29,7 +29,6 @@
 /* Begin PBXFileReference section */
 		D083E0671611020800858D62 /* libYTFKeyboardCorrector.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYTFKeyboardCorrector.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D083E06A1611020800858D62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D083E06E1611020800858D62 /* YTFKeyboardCorrector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YTFKeyboardCorrector-Prefix.pch"; sourceTree = "<group>"; };
 		D083E06F1611020800858D62 /* YTFKeyboardCorrector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTFKeyboardCorrector.h; sourceTree = "<group>"; };
 		D083E0711611020800858D62 /* YTFKeyboardCorrector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTFKeyboardCorrector.m; sourceTree = "<group>"; };
 		D083E0781611037400858D62 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -79,17 +78,8 @@
 			children = (
 				D083E06F1611020800858D62 /* YTFKeyboardCorrector.h */,
 				D083E0711611020800858D62 /* YTFKeyboardCorrector.m */,
-				D083E06D1611020800858D62 /* Supporting Files */,
 			);
 			path = YTFKeyboardCorrector;
-			sourceTree = "<group>";
-		};
-		D083E06D1611020800858D62 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D083E06E1611020800858D62 /* YTFKeyboardCorrector-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +160,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				SDKROOT = iphoneos;
+				SHARED_PRECOMPS_DIR = "";
 			};
 			name = Debug;
 		};
@@ -188,7 +180,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				SDKROOT = iphoneos;
+				SHARED_PRECOMPS_DIR = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -197,10 +191,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/YTFKeyboardCorrector.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "YTFKeyboardCorrector/YTFKeyboardCorrector-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				OTHER_LDFLAGS = "-ObjC";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SHARED_PRECOMPS_DIR = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -209,10 +205,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/YTFKeyboardCorrector.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "YTFKeyboardCorrector/YTFKeyboardCorrector-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				OTHER_LDFLAGS = "-ObjC";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SHARED_PRECOMPS_DIR = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
