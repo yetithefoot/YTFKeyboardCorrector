@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D083E06B1611020800858D62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D083E06A1611020800858D62 /* Foundation.framework */; };
-		D083E0701611020800858D62 /* YTFKeyboardCorrector.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D083E06F1611020800858D62 /* YTFKeyboardCorrector.h */; };
-		D083E0721611020800858D62 /* YTFKeyboardCorrector.m in Sources */ = {isa = PBXBuildFile; fileRef = D083E0711611020800858D62 /* YTFKeyboardCorrector.m */; };
 		D083E0791611037400858D62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D083E0781611037400858D62 /* UIKit.framework */; };
+		D083E0B016110D1600858D62 /* YTFKeyboardCorrector.m in Sources */ = {isa = PBXBuildFile; fileRef = D083E0AF16110D1600858D62 /* YTFKeyboardCorrector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,7 +19,6 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				D083E0701611020800858D62 /* YTFKeyboardCorrector.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -29,9 +27,9 @@
 /* Begin PBXFileReference section */
 		D083E0671611020800858D62 /* libYTFKeyboardCorrector.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYTFKeyboardCorrector.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D083E06A1611020800858D62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D083E06F1611020800858D62 /* YTFKeyboardCorrector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTFKeyboardCorrector.h; sourceTree = "<group>"; };
-		D083E0711611020800858D62 /* YTFKeyboardCorrector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTFKeyboardCorrector.m; sourceTree = "<group>"; };
 		D083E0781611037400858D62 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D083E0AE16110D1600858D62 /* YTFKeyboardCorrector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTFKeyboardCorrector.h; sourceTree = "<group>"; };
+		D083E0AF16110D1600858D62 /* YTFKeyboardCorrector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTFKeyboardCorrector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +48,8 @@
 		D083E05C1611020800858D62 = {
 			isa = PBXGroup;
 			children = (
-				D083E06C1611020800858D62 /* YTFKeyboardCorrector */,
+				D083E0AE16110D1600858D62 /* YTFKeyboardCorrector.h */,
+				D083E0AF16110D1600858D62 /* YTFKeyboardCorrector.m */,
 				D083E0691611020800858D62 /* Frameworks */,
 				D083E0681611020800858D62 /* Products */,
 			);
@@ -71,15 +70,6 @@
 				D083E06A1611020800858D62 /* Foundation.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D083E06C1611020800858D62 /* YTFKeyboardCorrector */ = {
-			isa = PBXGroup;
-			children = (
-				D083E06F1611020800858D62 /* YTFKeyboardCorrector.h */,
-				D083E0711611020800858D62 /* YTFKeyboardCorrector.m */,
-			);
-			path = YTFKeyboardCorrector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,7 +122,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D083E0721611020800858D62 /* YTFKeyboardCorrector.m in Sources */,
+				D083E0B016110D1600858D62 /* YTFKeyboardCorrector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
