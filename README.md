@@ -4,9 +4,9 @@ YTFKeyboardCorrector
 Keyboard Corrector for input fields in iOS.
 
 
-<img src="https://raw.github.com/yetithefoot/YTFKeyboardCorrector/master/raw/1.png" alt="Image1" title="YTFKeyboardCorrector" style="width:320px!important; display:inline; margin: 10px auto 30px auto;"/>
-<img src="https://raw.github.com/yetithefoot/YTFKeyboardCorrector/master/raw/2.png" alt="Imagew" title="YTFKeyboardCorrector" style="width:320px!important; display:inline; margin: 10px auto 30px auto;"/>
-<img src="https://raw.github.com/yetithefoot/YTFKeyboardCorrector/master/raw/3.png" alt="Imagee" title="YTFKeyboardCorrector" style="width:320px!important; display:inline; margin: 10px auto 30px auto;"/>
+<img src="https://raw.github.com/yetithefoot/YTFKeyboardCorrector/master/raw/1.png" alt="Image1" title="YTFKeyboardCorrector" width="240px" style="display:inline; margin: 10px auto 30px auto;">
+<img src="https://raw.github.com/yetithefoot/YTFKeyboardCorrector/master/raw/2.png" alt="Imagew" title="YTFKeyboardCorrector" width="240px" style="width:320px!important; display:inline; margin: 10px auto 30px auto;">
+<img src="https://raw.github.com/yetithefoot/YTFKeyboardCorrector/master/raw/3.png" alt="Imagee" title="YTFKeyboardCorrector" width="240px" style="width:320px!important; display:inline; margin: 10px auto 30px auto;">
 Init
 ----
 
