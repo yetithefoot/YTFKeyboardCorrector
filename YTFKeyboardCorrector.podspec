@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.platform = :ios
   s.name     = 'YTFKeyboardCorrector'
   s.version  = '0.1'
-  s.license  = 'MIT'
+  s.license  = { :type => 'MIT', :file => 'LICENSE' }
   s.summary  = 'Corrector for keyboard used in iOS.'
   s.homepage = 'https://github.com/yetithefoot/YTFKeyboardCorrector'
   s.authors  = {'YetiTheFoot' => 'reg.yeti@gmail.com'}
