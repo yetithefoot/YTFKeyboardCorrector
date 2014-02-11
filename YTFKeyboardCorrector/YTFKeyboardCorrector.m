@@ -39,53 +39,58 @@ static float _animatedDistance;
 
 - (void) beginInput: (UIView*) field;
 {
-	self.lastField = field;
-	
-	if(field == nil)
-	{
-		return;
-	}
-	
-	float kbH = UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation) ?
-	PORTRAIT_KEYBOARD_HEIGHT_IPHONE : LANDSCAPE_KEYBOARD_HEIGHT_IPHONE;
-	
-	CGRect textFieldRect = [self.window convertRect: field.bounds fromView: field];
-	CGRect viewFrame = [[[self.window subviews] objectAtIndex: 0] frame];
-	_animatedDistance = 0;
+  [self beginInput: field, withOffset: 0];
+}
+
+- (void)beginInput:(UIView*)field withOffset:(float)offset
+{
+  self.lastField = field;
+  
+  if(field == nil)
+  {
+    return;
+  }
+  
+  float kbH = UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation) ?
+  PORTRAIT_KEYBOARD_HEIGHT_IPHONE : LANDSCAPE_KEYBOARD_HEIGHT_IPHONE;
+  
+  CGRect textFieldRect = [self.window convertRect: field.bounds fromView: field];
+  CGRect viewFrame = [[[self.window subviews] objectAtIndex: 0] frame];
+  _animatedDistance = 0;
     
-	switch ([UIApplication sharedApplication].statusBarOrientation)
-	{
-		case UIInterfaceOrientationPortrait:
-			_animatedDistance = viewFrame.size.height - (textFieldRect.origin.y + textFieldRect.size.height - viewFrame.origin.y + kbH);
-			if (_animatedDistance > 0) _animatedDistance = 0;
-			viewFrame.origin.y += _animatedDistance;
-			break;
-		case UIInterfaceOrientationPortraitUpsideDown:
-			_animatedDistance = viewFrame.size.height - (viewFrame.size.height - textFieldRect.origin.y + kbH);
-			if (_animatedDistance > 0) _animatedDistance = 0;
-			viewFrame.origin.y -= _animatedDistance;
-			break;
-		case UIInterfaceOrientationLandscapeLeft:
-			_animatedDistance = viewFrame.size.width - (textFieldRect.origin.x + textFieldRect.size.width - viewFrame.origin.x + kbH);
-			if (_animatedDistance > 0) _animatedDistance = 0;
-			viewFrame.origin.x += _animatedDistance;
-			break;
-		case UIInterfaceOrientationLandscapeRight:
-			_animatedDistance = viewFrame.size.width - (viewFrame.size.width - textFieldRect.origin.x  + kbH);
-			if (_animatedDistance > 0) _animatedDistance = 0;
-			viewFrame.origin.x -= _animatedDistance;
-			break;
-		default:
-			break;
-	}
-	
-	[UIView beginAnimations:nil context:NULL];
-	[UIView setAnimationBeginsFromCurrentState:YES];
-	[UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
-	[[[self.window subviews] objectAtIndex: 0] setFrame: viewFrame];
-	[UIView commitAnimations];
-	
-	
+  switch ([UIApplication sharedApplication].statusBarOrientation)
+  {
+    case UIInterfaceOrientationPortrait:
+      _animatedDistance = viewFrame.size.height - (textFieldRect.origin.y + textFieldRect.size.height - viewFrame.origin.y + kbH) - offset;
+      if (_animatedDistance > 0) _animatedDistance = 0;
+      viewFrame.origin.y += _animatedDistance;
+      break;
+    case UIInterfaceOrientationPortraitUpsideDown:
+      _animatedDistance = viewFrame.size.height - (viewFrame.size.height - textFieldRect.origin.y + kbH) + offset;
+      if (_animatedDistance > 0) _animatedDistance = 0;
+      viewFrame.origin.y -= _animatedDistance;
+      break;
+    case UIInterfaceOrientationLandscapeLeft:
+      _animatedDistance = viewFrame.size.width - (textFieldRect.origin.x + textFieldRect.size.width - viewFrame.origin.x + kbH) - offset;
+      if (_animatedDistance > 0) _animatedDistance = 0;
+      viewFrame.origin.x += _animatedDistance;
+      break;
+    case UIInterfaceOrientationLandscapeRight:
+      _animatedDistance = viewFrame.size.width - (viewFrame.size.width - textFieldRect.origin.x  + kbH) - offset;
+      if (_animatedDistance > 0) _animatedDistance = 0;
+      viewFrame.origin.x -= _animatedDistance;
+      break;
+    default:
+      break;
+  }
+  
+  [UIView beginAnimations:nil context:NULL];
+  [UIView setAnimationBeginsFromCurrentState:YES];
+  [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
+  [[[self.window subviews] objectAtIndex: 0] setFrame: viewFrame];
+  [UIView commitAnimations];
+  
+  
 }
 
 - (void) endInput
