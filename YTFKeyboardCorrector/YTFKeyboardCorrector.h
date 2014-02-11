@@ -20,6 +20,7 @@
 @property (nonatomic,retain) UIWindow* window;
 
 - (void) beginInput: (UIView*) field;
+- (void) beginInput: (UIView*) field withOffset: (float) offset;
 - (void) endInput;
 
 @end
